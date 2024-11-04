@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: parquet_data
+    database: duckdb
+    schema: raw
+    meta:
+      external_location: "read_parquet('\Users\user\Desktop\dbt2\lizi-dbt\shared')"
+    tables:
+      - name: users
+        description: "User  information from the parquet files"
+      - name: transactions
+        description: "Transaction records from the parquet files"
